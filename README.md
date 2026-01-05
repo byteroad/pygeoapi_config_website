@@ -1,6 +1,6 @@
 # README
 
-This site creates the user documentation for the OGC API SDI, at DGT. Docs are built using [mkdocs](https://www.mkdocs.org/).
+This site creates the user documentation for the [pygeoapi config QGIS plugin](https://github.com/byteroad/pygeoapi_config/). Docs are built using [mkdocs](https://www.mkdocs.org/).
 
 Build using:
 
