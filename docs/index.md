@@ -85,8 +85,8 @@ Although the plugin itself comes in English, there is [some language support bui
 
 This website is a live project and we welcome contributions from the community! If you have suggestions for improvements, found a bug, or want to add new features, feel free to:
 
-* Open an [issue](https://github.com/opengeospatial/ogc-records-website/issues) to start a discussion
-* Submit a [pull request](https://github.com/opengeospatial/ogc-records-website/pulls) with your proposed changes
+* Open an [issue](https://github.com/byteroad/pygeoapi_config_website/issues) to start a discussion
+* Submit a [pull request](https://github.com/byteroad/pygeoapi_config_website/issues/pulls) with your proposed changes
 
 We appreciate your support in making this website better!
 
