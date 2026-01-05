@@ -1,0 +1,5 @@
+site_name: pygeoapi config
+
+markdown_extensions:
+  - attr_list
+  - tables
