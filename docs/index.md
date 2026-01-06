@@ -95,3 +95,7 @@ We appreciate your support in making this website better!
 This website is released under an [MIT License](./LICENSE)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Disclaimer❗
+
+The code and the content of this website was carefully crafted by a human, without using AI. If you find any mistakes, they are errors, not hallucinations.
