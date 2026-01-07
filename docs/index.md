@@ -16,7 +16,7 @@ After installing the plugin, you can access is it through the `Plugins-> pygeoap
 
 You can read and write a configuration [from a local file](#using-a-local-file) or [from a server](#connecting-to-a-server).
 
-## Using a Local File
+## Using a Local File 💾
 
 The main motivation to develop this plugin is to provide an user friedly tool to read and write the pygeoapi config file. 
 
@@ -30,7 +30,7 @@ If you want to read or write the configuration from a local file, scroll all the
 
 ![local file](img/local-file.png)
 
-## Connecting to a Server
+## Connecting to a Server 📡
 
 As an experimental feature, this plugin also supports pulling and pushing from/to a pygeoapi instance. This is provided more as an educational feature, for users to be able to play with a pygeoapi instance and immediatly see the effects. It can also be used with a local pygeoapi instance, to generate a pygeoapi config file interactively. Some important notes about this functionality:
 
@@ -50,7 +50,7 @@ If you want to pull or push configuration from/to a server, enable the `Server C
 
 ![server connection](img/server-connection.png)
 
-## Validation
+## Validation 📝
 
 Generating a valid pygeoapi config file is one of the main concerns of this plugin. Several levels of validation are introduced in the plugin:
 
@@ -61,7 +61,7 @@ When saving the plugin creates a report of the specific changes that were made, 
 
 The unit tests capture the consistency of the plugin, by opening and saving a config file.
 
-## Supported Resources
+## Supported Resources ✅
 
 The plugin currently supports only a handfull of OGC APIs and providers. Please check the table bellow, for the specific details.
 
@@ -73,7 +73,7 @@ The plugin currently supports only a handfull of OGC APIs and providers. Please 
 
 You can check the details about each provider in the the [pygeoapi documentation](https://docs.pygeoapi.io/en/latest/). Providers that are not supported are set as `read-only`; *i.e.*, they are shown in the UI, but cannot be modified.
 
-## Language
+## Language 🌎
 
 Some of the configuration keys (e.g.: title, description) can be multilingual, and that is supported through the UI. Bellow we show how to add a Portuguese translation for the instance title.
 
@@ -81,21 +81,6 @@ Some of the configuration keys (e.g.: title, description) can be multilingual, a
 
 Although the plugin itself comes in English, there is [some language support built in](https://github.com/byteroad/pygeoapi_config/?tab=readme-ov-file#translate). This means that someone could create translations for other languages. If you are interested in providing a translation, you should work directly in the [project repository](https://github.com/byteroad/pygeoapi_config/) to create a Pull Request.
 
-## Contributing 🤝
+## Disclaimer ⚠️
 
-This website is a live project and we welcome contributions from the community! If you have suggestions for improvements, found a bug, or want to add new features, feel free to:
-
-* Open an [issue](https://github.com/byteroad/pygeoapi_config_website/issues) to start a discussion
-* Submit a [pull request](https://github.com/byteroad/pygeoapi_config_website/issues/pulls) with your proposed changes
-
-We appreciate your support in making this website better!
-
-## License
-
-This website is released under an [MIT License](./LICENSE)
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-## Disclaimer❗
-
-The code and the contents of this website were carefully crafted by a human, without using AI. If you find any mistakes, they are errors, not hallucinations.
+The code and the contents of this website were carefully crafted by a human for humans, without using AI. If you find any mistakes please be patient: these are errors, not hallucinations. Thank You 🙏
