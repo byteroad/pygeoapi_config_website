@@ -55,35 +55,27 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#pygeoapi-configurator-plugin" class="nav-link">pygeoapi configurator plugin 🔧</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#using-a-local-file" class="nav-link">Using a Local File</a>
+            <li class="nav-item" data-bs-level="2"><a href="#using-a-local-file" class="nav-link">Using a Local File 💾</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#connecting-to-a-server" class="nav-link">Connecting to a Server</a>
+            <li class="nav-item" data-bs-level="2"><a href="#connecting-to-a-server" class="nav-link">Connecting to a Server 📡</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#validation" class="nav-link">Validation</a>
+            <li class="nav-item" data-bs-level="2"><a href="#validation" class="nav-link">Validation 📝</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#supported-resources" class="nav-link">Supported Resources</a>
+            <li class="nav-item" data-bs-level="2"><a href="#supported-resources" class="nav-link">Supported Resources ✅</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#language" class="nav-link">Language</a>
+            <li class="nav-item" data-bs-level="2"><a href="#language" class="nav-link">Language 🌎</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#contributing" class="nav-link">Contributing 🤝</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#license" class="nav-link">License</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#disclaimer" class="nav-link">Disclaimer❗</a>
+            <li class="nav-item" data-bs-level="2"><a href="#disclaimer" class="nav-link">Disclaimer ⚠️</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -107,7 +99,7 @@
 <img alt="metadata" src="img/screenshot-metadata.png" width="32%" />
 <img alt="resources" src="img/screenshot-resources.png" width="32%" /></p>
 <p>You can read and write a configuration <a href="#using-a-local-file">from a local file</a> or <a href="#connecting-to-a-server">from a server</a>.</p>
-<h2 id="using-a-local-file">Using a Local File</h2>
+<h2 id="using-a-local-file">Using a Local File 💾</h2>
 <p>The main motivation to develop this plugin is to provide an user friedly tool to read and write the pygeoapi config file. </p>
 <ul>
 <li>An user can open a config file from a pygeoapi instance and view the different options.</li>
@@ -117,7 +109,7 @@
 <p>It is worth saying that the plugin establishes <a href="#validation">validation steps</a> along the way. </p>
 <p>If you want to read or write the configuration from a local file, scroll all the way to the bottom of the dialog and enable the <code>Local file</code> radio button. Then you can use the <code>Open</code> and <code>Save</code> buttons to load the file, or save the file.</p>
 <p><img alt="local file" src="img/local-file.png" /></p>
-<h2 id="connecting-to-a-server">Connecting to a Server</h2>
+<h2 id="connecting-to-a-server">Connecting to a Server 📡</h2>
 <p>As an experimental feature, this plugin also supports pulling and pushing from/to a pygeoapi instance. This is provided more as an educational feature, for users to be able to play with a pygeoapi instance and immediatly see the effects. It can also be used with a local pygeoapi instance, to generate a pygeoapi config file interactively. Some important notes about this functionality:</p>
 <ul>
 <li>The pygeoapi <a href="https://docs.pygeoapi.io/en/latest/admin-api.html">admin API</a> must be enabled on the pygeoapi running instance.</li>
@@ -125,12 +117,12 @@
 <li>If you want to see the changes without restarting the service, you must <a href="https://docs.pygeoapi.io/en/latest/admin-api.html#pygeoapi-hot-reloading-in-gunicorn">run pygeoapi with hot reload</a>.</li>
 </ul>
 <p>It goes without saying that a combination of an unprotected instance and an enabled admin API creates a security risk that is unaceptable for production scenarios. For that reason it should be used for <strong>testing purposes only, without exposing the service to the Internet</strong>.</p>
-<p>Run a pygeoapi docker container with hot reload, mounting a local configuration file:</p>
-<pre><code class="language-bash">docker run -p 5000:80 -v $(pwd)/example-config.yml:/pygeoapi/local.config.yml geopython/pygeoapi:latest run-with-hot-reload
+<p>Run a pygeoapi docker container with hot reload, enabling the admin API:</p>
+<pre><code class="language-bash">docker run -p 5000:80 -e PYGEOAPI_SERVER_ADMIN=true geopython/pygeoapi:latest run-with-hot-reload
 </code></pre>
 <p>If you want to pull or push configuration from/to a server, enable the <code>Server Connection</code> radio button at the bottom of the tab. Then a popup will be triggered, which lets you configure the host and port of the running server.</p>
 <p><img alt="server connection" src="img/server-connection.png" /></p>
-<h2 id="validation">Validation</h2>
+<h2 id="validation">Validation 📝</h2>
 <p>Generating a valid pygeoapi config file is one of the main concerns of this plugin. Several levels of validation are introduced in the plugin:</p>
 <ul>
 <li>Some UI widgets have masks which control for particular data types.</li>
@@ -138,7 +130,7 @@
 </ul>
 <p>When saving the plugin creates a report of the specific changes that were made, and prompts the user to confirm those; this is done for transparency and for catching unintended changes.</p>
 <p>The unit tests capture the consistency of the plugin, by opening and saving a config file.</p>
-<h2 id="supported-resources">Supported Resources</h2>
+<h2 id="supported-resources">Supported Resources ✅</h2>
 <p>The plugin currently supports only a handfull of OGC APIs and providers. Please check the table bellow, for the specific details.</p>
 <table>
 <thead>
@@ -163,22 +155,12 @@
 </tbody>
 </table>
 <p>You can check the details about each provider in the the <a href="https://docs.pygeoapi.io/en/latest/">pygeoapi documentation</a>. Providers that are not supported are set as <code>read-only</code>; <em>i.e.</em>, they are shown in the UI, but cannot be modified.</p>
-<h2 id="language">Language</h2>
+<h2 id="language">Language 🌎</h2>
 <p>Some of the configuration keys (e.g.: title, description) can be multilingual, and that is supported through the UI. Bellow we show how to add a Portuguese translation for the instance title.</p>
 <p><img alt="portuguese title" src="img/multilingual.png" /></p>
 <p>Although the plugin itself comes in English, there is <a href="https://github.com/byteroad/pygeoapi_config/?tab=readme-ov-file#translate">some language support built in</a>. This means that someone could create translations for other languages. If you are interested in providing a translation, you should work directly in the <a href="https://github.com/byteroad/pygeoapi_config/">project repository</a> to create a Pull Request.</p>
-<h2 id="contributing">Contributing 🤝</h2>
-<p>This website is a live project and we welcome contributions from the community! If you have suggestions for improvements, found a bug, or want to add new features, feel free to:</p>
-<ul>
-<li>Open an <a href="https://github.com/byteroad/pygeoapi_config_website/issues">issue</a> to start a discussion</li>
-<li>Submit a <a href="https://github.com/byteroad/pygeoapi_config_website/issues/pulls">pull request</a> with your proposed changes</li>
-</ul>
-<p>We appreciate your support in making this website better!</p>
-<h2 id="license">License</h2>
-<p>This website is released under an <a href="./LICENSE">MIT License</a></p>
-<p><a href="https://opensource.org/licenses/MIT"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a></p>
-<h2 id="disclaimer">Disclaimer❗</h2>
-<p>The code and the contents of this website were carefully crafted by a human, without using AI. If you find any mistakes, they are errors, not hallucinations.</p></div>
+<h2 id="disclaimer">Disclaimer ⚠️</h2>
+<p>The code and the contents of this website were carefully crafted by a human for humans, without using AI. If you find any mistakes please be patient: these are errors, not hallucinations. Thank You 🙏</p></div>
             </div>
         </div>
 
@@ -260,5 +242,5 @@
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2026-01-06 11:59:35.010462+00:00
+Build Date UTC : 2026-01-09 09:29:04.412605+00:00
 -->
