@@ -40,10 +40,10 @@ As an experimental feature, this plugin also supports pulling and pushing from/t
 
 It goes without saying that a combination of an unprotected instance and an enabled admin API creates a security risk that is unaceptable for production scenarios. For that reason it should be used for **testing purposes only, without exposing the service to the Internet**.
 
-Run a pygeoapi docker container with hot reload, mounting a local configuration file:
+Run a pygeoapi docker container with hot reload, enabling the admin API:
 
 ```bash
-docker run -p 5000:80 -v $(pwd)/example-config.yml:/pygeoapi/local.config.yml geopython/pygeoapi:latest run-with-hot-reload
+docker run -p 5000:80 -e PYGEOAPI_SERVER_ADMIN=true geopython/pygeoapi:latest run-with-hot-reload
 ```
 
 If you want to pull or push configuration from/to a server, enable the `Server Connection` radio button at the bottom of the tab. Then a popup will be triggered, which lets you configure the host and port of the running server.
